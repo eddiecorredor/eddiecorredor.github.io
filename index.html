@@ -1,13 +1,1629 @@
 <!DOCTYPE html>
-<html lang='en-us'>
-  <head>
-    <title>Eddie Corredor</title>
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/main.css">
-  </head>
-  <body>
-    <h1>Test</h1>
-  <script src="/assets/js/master.js"></script>
-  </body>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Ed Corredor — Web Developer, Linux enthusiast, and technology problem solver.">
+
+  <title>Eddie Corredor-Gutierrez | Developer & Technologist</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root {
+
+      --bg: #0b1120;
+
+      --surface: #111b2e;
+
+      --surface-light: #17243a;
+
+      --text: #e8edf7;
+
+      --muted: #9ba9bf;
+
+      --accent: #69e0c0;
+
+      --accent-dark: #123c38;
+
+      --border: rgba(255,255,255,.09);
+
+      --max-width: 1080px;
+
+    }
+
+    * {
+
+      box-sizing: border-box;
+
+      margin: 0;
+
+      padding: 0;
+
+    }
+
+    html {
+
+      scroll-behavior: smooth;
+
+      scroll-padding-top: 85px;
+
+    }
+
+    body {
+
+      background: var(--bg);
+
+      color: var(--text);
+
+      font-family: "DM Sans", sans-serif;
+
+      line-height: 1.7;
+
+    }
+
+    a {
+
+      color: inherit;
+
+      text-decoration: none;
+
+    }
+
+    .container {
+
+      width: min(90%, var(--max-width));
+
+      margin: 0 auto;
+
+    }
+
+    h1, h2, h3, .brand {
+
+      font-family: "Space Grotesk", sans-serif;
+
+      line-height: 1.2;
+
+    }
+
+    h2 {
+
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+
+      margin-bottom: 18px;
+
+    }
+
+    .section {
+
+      padding: 95px 0;
+
+    }
+
+    .eyebrow {
+
+      color: var(--accent);
+
+      font-size: .82rem;
+
+      font-weight: 700;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 15px;
+
+    }
+
+    .section-intro {
+
+      color: var(--muted);
+
+      max-width: 650px;
+
+      margin-bottom: 40px;
+
+    }
+
+    /* Navigation */
+
+    header {
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 100;
+
+      background: rgba(11,17,32,.92);
+
+      backdrop-filter: blur(16px);
+
+      border-bottom: 1px solid var(--border);
+
+    }
+
+    nav {
+
+      min-height: 76px;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      gap: 20px;
+
+    }
+
+    .brand {
+
+      font-size: 1.25rem;
+
+      font-weight: 700;
+
+      letter-spacing: -.5px;
+
+    }
+
+    .brand span {
+
+      color: var(--accent);
+
+    }
+
+    .nav-links {
+
+      display: flex;
+
+      gap: 28px;
+
+      list-style: none;
+
+      align-items: center;
+
+    }
+
+    .nav-links a {
+
+      color: var(--muted);
+
+      font-size: .9rem;
+
+      transition: color .2s;
+
+    }
+
+    .nav-links a:hover {
+
+      color: var(--accent);
+
+    }
+
+    .nav-cta {
+
+      border: 1px solid var(--accent);
+
+      color: var(--accent) !important;
+
+      padding: 9px 17px;
+
+      border-radius: 7px;
+
+    }
+
+    /* Hero */
+
+    .hero {
+
+      padding: 115px 0 105px;
+
+      position: relative;
+
+      overflow: hidden;
+
+    }
+
+    .hero::before {
+
+      content: "";
+
+      position: absolute;
+
+      width: 500px;
+
+      height: 500px;
+
+      right: -180px;
+
+      top: -100px;
+
+      background: radial-gradient(circle, rgba(105,224,192,.12), transparent 70%);
+
+      pointer-events: none;
+
+    }
+
+    .hero-grid {
+
+      display: grid;
+
+      grid-template-columns: 1.4fr .8fr;
+
+      align-items: center;
+
+      gap: 60px;
+
+    }
+
+    .hero h1 {
+
+      font-size: clamp(2.8rem, 6.5vw, 5.2rem);
+
+      letter-spacing: -3px;
+
+      margin-bottom: 20px;
+
+    }
+
+    .hero h1 span {
+
+      color: var(--accent);
+
+    }
+
+    .hero-description {
+
+      max-width: 620px;
+
+      color: var(--muted);
+
+      font-size: 1.08rem;
+
+      margin-bottom: 30px;
+
+    }
+
+    .hero-buttons {
+
+      display: flex;
+
+      gap: 14px;
+
+      flex-wrap: wrap;
+
+      margin-bottom: 30px;
+
+    }
+
+    .btn {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding: 12px 22px;
+
+      border-radius: 7px;
+
+      font-weight: 700;
+
+      font-size: .92rem;
+
+      transition: transform .2s, background .2s;
+
+    }
+
+    .btn:hover {
+
+      transform: translateY(-2px);
+
+    }
+
+    .btn-primary {
+
+      background: var(--accent);
+
+      color: #071711;
+
+    }
+
+    .btn-secondary {
+
+      border: 1px solid var(--border);
+
+      color: var(--text);
+
+    }
+
+    .location {
+
+      color: var(--muted);
+
+      font-size: .9rem;
+
+    }
+
+    .location span {
+
+      color: var(--accent);
+
+    }
+
+    /* Code card */
+
+    .code-card {
+
+      background: var(--surface);
+
+      border: 1px solid var(--border);
+
+      border-radius: 14px;
+
+      overflow: hidden;
+
+      box-shadow: 0 30px 80px rgba(0,0,0,.25);
+
+      transform: rotate(1deg);
+
+    }
+
+    .code-header {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 7px;
+
+      padding: 15px 18px;
+
+      border-bottom: 1px solid var(--border);
+
+    }
+
+    .dot {
+
+      width: 10px;
+
+      height: 10px;
+
+      border-radius: 50%;
+
+      background: #ef7777;
+
+    }
+
+    .dot:nth-child(2) { background: #e7bd65; }
+
+    .dot:nth-child(3) { background: #69d8a0; }
+
+    .code-title {
+
+      margin-left: auto;
+
+      font-size: .75rem;
+
+      color: var(--muted);
+
+    }
+
+    .code-body {
+
+      padding: 25px 20px;
+
+      font-family: monospace;
+
+      font-size: .88rem;
+
+      line-height: 2;
+
+      overflow-x: auto;
+
+    }
+
+    .code-body .comment { color: #71839e; }
+
+    .code-body .key { color: #69e0c0; }
+
+    .code-body .string { color: #e7bd8a; }
+
+    .code-body .value { color: #b6a4f5; }
+
+    /* About */
+
+    .about-grid {
+
+      display: grid;
+
+      grid-template-columns: 1.2fr .8fr;
+
+      gap: 50px;
+
+      align-items: start;
+
+    }
+
+    .about-copy p {
+
+      color: var(--muted);
+
+      margin-bottom: 18px;
+
+    }
+
+    .principles {
+
+      display: grid;
+
+      gap: 14px;
+
+    }
+
+    .principle {
+
+      padding: 20px;
+
+      background: var(--surface);
+
+      border: 1px solid var(--border);
+
+      border-radius: 10px;
+
+    }
+
+    .principle h3 {
+
+      font-size: 1.05rem;
+
+      margin-bottom: 6px;
+
+    }
+
+    .principle p {
+
+      color: var(--muted);
+
+      font-size: .9rem;
+
+    }
+
+    /* Skills */
+
+    .skills-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 18px;
+
+    }
+
+    .skill-card {
+
+      background: var(--surface);
+
+      border: 1px solid var(--border);
+
+      padding: 25px;
+
+      border-radius: 12px;
+
+      transition: border-color .2s, transform .2s;
+
+    }
+
+    .skill-card:hover {
+
+      border-color: var(--accent);
+
+      transform: translateY(-3px);
+
+    }
+
+    .skill-icon {
+
+      font-family: monospace;
+
+      color: var(--accent);
+
+      font-size: 1.5rem;
+
+      margin-bottom: 18px;
+
+      font-weight: 700;
+
+    }
+
+    .skill-card h3 {
+
+      font-size: 1.12rem;
+
+      margin-bottom: 12px;
+
+    }
+
+    .skill-card p {
+
+      color: var(--muted);
+
+      font-size: .9rem;
+
+      margin-bottom: 18px;
+
+    }
+
+    .tags {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 7px;
+
+    }
+
+    .tag {
+
+      background: var(--accent-dark);
+
+      color: var(--accent);
+
+      border-radius: 5px;
+
+      padding: 5px 9px;
+
+      font-size: .76rem;
+
+      font-weight: 600;
+
+    }
+
+    /* Projects */
+
+    .projects-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 20px;
+
+    }
+
+    .project-card {
+
+      background: var(--surface);
+
+      border: 1px solid var(--border);
+
+      border-radius: 12px;
+
+      padding: 28px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      min-height: 280px;
+
+    }
+
+    .project-number {
+
+      font-family: monospace;
+
+      color: var(--accent);
+
+      font-size: .85rem;
+
+      margin-bottom: 20px;
+
+    }
+
+    .project-card h3 {
+
+      font-size: 1.3rem;
+
+      margin-bottom: 12px;
+
+    }
+
+    .project-card p {
+
+      color: var(--muted);
+
+      font-size: .92rem;
+
+      margin-bottom: 20px;
+
+    }
+
+    .project-card .tags {
+
+      margin-top: auto;
+
+    }
+
+    /* Learning */
+
+    .learning-box {
+
+      background: linear-gradient(120deg, #132b32, #111b2e);
+
+      border: 1px solid rgba(105,224,192,.2);
+
+      border-radius: 14px;
+
+      padding: 35px;
+
+    }
+
+    .learning-box p {
+
+      color: var(--muted);
+
+      max-width: 750px;
+
+    }
+
+    .learning-tags {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+      margin-top: 25px;
+
+    }
+
+    .learning-tags span {
+
+      border: 1px solid rgba(105,224,192,.25);
+
+      border-radius: 7px;
+
+      padding: 8px 13px;
+
+      color: var(--accent);
+
+      font-size: .88rem;
+
+    }
+
+    /* Languages */
+
+    .languages-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 18px;
+
+    }
+
+    .language-card {
+
+      padding: 25px;
+
+      border: 1px solid var(--border);
+
+      background: var(--surface);
+
+      border-radius: 10px;
+
+    }
+
+    .language-card h3 {
+
+      font-size: 1.2rem;
+
+      margin-bottom: 8px;
+
+    }
+
+    .language-card p {
+
+      color: var(--muted);
+
+      font-size: .9rem;
+
+    }
+
+    .language-level {
+
+      display: inline-block;
+
+      color: var(--accent);
+
+      font-size: .78rem;
+
+      font-weight: 700;
+
+      margin-top: 14px;
+
+      letter-spacing: .5px;
+
+      text-transform: uppercase;
+
+    }
+
+    /* Contact */
+
+    .contact-box {
+
+      text-align: center;
+
+      background: var(--surface);
+
+      border: 1px solid var(--border);
+
+      padding: 60px 30px;
+
+      border-radius: 14px;
+
+    }
+
+    .contact-box h2 {
+
+      font-size: clamp(2rem, 5vw, 3rem);
+
+    }
+
+    .contact-box p {
+
+      color: var(--muted);
+
+      max-width: 550px;
+
+      margin: 0 auto 25px;
+
+    }
+
+    .contact-links {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      justify-content: center;
+
+      gap: 15px;
+
+    }
+
+    footer {
+
+      padding: 28px 0;
+
+      border-top: 1px solid var(--border);
+
+      color: var(--muted);
+
+      font-size: .82rem;
+
+      text-align: center;
+
+    }
+
+    /* Responsive */
+
+    @media (max-width: 800px) {
+
+      .hero-grid,
+
+      .about-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+      .hero {
+
+        padding: 80px 0;
+
+      }
+
+      .code-card {
+
+        max-width: 500px;
+
+        transform: none;
+
+      }
+
+      .skills-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+      }
+
+      .nav-links {
+
+        gap: 14px;
+
+      }
+
+      .nav-links li:nth-child(2),
+
+      .nav-links li:nth-child(3) {
+
+        display: none;
+
+      }
+
+    }
+
+    @media (max-width: 540px) {
+
+      .section {
+
+        padding: 65px 0;
+
+      }
+
+      .hero h1 {
+
+        letter-spacing: -1.5px;
+
+      }
+
+      .skills-grid,
+
+      .projects-grid,
+
+      .languages-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+      .nav-links {
+
+        gap: 10px;
+
+      }
+
+      .nav-cta {
+
+        padding: 7px 10px;
+
+      }
+
+      .learning-box {
+
+        padding: 25px;
+
+      }
+
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html { scroll-behavior: auto; }
+
+      *, *::before, *::after {
+
+        transition-duration: .01ms !important;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+
+  <header>
+
+    <nav class="container">
+
+      <a class="brand" href="#home">ED<span>.</span></a>
+
+      <ul class="nav-links">
+
+        <li><a href="#about">About</a></li>
+
+        <li><a href="#skills">Skills</a></li>
+
+        <li><a href="#projects">Projects</a></li>
+
+        <li><a href="#languages">Languages</a></li>
+
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+
+      </ul>
+
+    </nav>
+
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+
+    <section class="hero" id="home">
+
+      <div class="container hero-grid">
+
+        <div>
+
+          <p class="eyebrow">Developer · Problem Solver · Lifelong Learner</p>
+
+          <h1>Eddie<br><span>Corredor.</span></h1>
+
+          <p class="hero-description">
+
+            Self-taught developer with a passion for building software,
+
+            understanding systems, and solving real-world problems through
+
+            technology. From web applications to Linux servers and
+
+            networking, I enjoy learning how things work—and making them work better.
+
+          </p>
+
+          <div class="hero-buttons">
+
+            <a href="#projects" class="btn btn-primary">Explore My Work ↗</a>
+
+            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+
+          </div>
+
+          <p class="location"><span>●</span> Indianapolis, Indiana · Open to opportunities</p>
+
+        </div>
+
+        <div class="code-card" aria-label="Developer profile code illustration">
+
+          <div class="code-header">
+
+            <span class="dot"></span>
+
+            <span class="dot"></span>
+
+            <span class="dot"></span>
+
+            <span class="code-title">ed.profile.json</span>
+
+          </div>
+
+          <div class="code-body">
+
+            <div>{</div>
+
+            <div>&nbsp;&nbsp;<span class="key">"name"</span>: <span class="string">"Ed Corredor"</span>,</div>
+
+            <div>&nbsp;&nbsp;<span class="key">"role"</span>: <span class="string">"Developer"</span>,</div>
+
+            <div>&nbsp;&nbsp;<span class="key">"languages"</span>: [</div>
+
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"English"</span>,</div>
+
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Spanish"</span>,</div>
+
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Portuguese"</span></div>
+
+            <div>&nbsp;&nbsp;],</div>
+
+            <div>&nbsp;&nbsp;<span class="key">"mindset"</span>: <span class="string">"Always learning"</span>,</div>
+
+            <div>&nbsp;&nbsp;<span class="key">"status"</span>: <span class="value">"Building..."</span></div>
+
+            <div>}</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- About -->
+
+    <section class="section" id="about">
+
+      <div class="container">
+
+        <p class="eyebrow">01 / About Me</p>
+
+        <div class="about-grid">
+
+          <div class="about-copy">
+
+            <h2>Curiosity is my<br>greatest tool.</h2>
+
+            <p>
+
+              I'm a self-taught developer who believes the best way to
+
+              understand technology is to build with it. My journey has
+
+              taken me from writing web applications to configuring Linux
+
+              servers, exploring networking, and developing ideas for
+
+              practical software solutions.
+
+            </p>
+
+            <p>
+
+              I work with PHP, JavaScript, and Python, and I'm expanding
+
+              my knowledge of C++, databases, APIs, and modern development
+
+              tools. I enjoy both the creative side of software and the
+
+              technical details that make systems reliable.
+
+            </p>
+
+            <p>
+
+              Beyond code, I bring a multilingual perspective, a hands-on
+
+              approach to learning, and a genuine interest in helping people
+
+              solve technical problems.
+
+            </p>
+
+          </div>
+
+          <div class="principles">
+
+            <div class="principle">
+
+              <h3>Build to Understand</h3>
+
+              <p>Learn by experimenting, testing, and creating real projects.</p>
+
+            </div>
+
+            <div class="principle">
+
+              <h3>Think in Systems</h3>
+
+              <p>Understand how software, hardware, networks, and people connect.</p>
+
+            </div>
+
+            <div class="principle">
+
+              <h3>Keep Learning</h3>
+
+              <p>Stay curious, embrace challenges, and continuously improve.</p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Skills -->
+
+    <section class="section" id="skills">
+
+      <div class="container">
+
+        <p class="eyebrow">02 / Technical Skills</p>
+
+        <h2>Tools of the trade.</h2>
+
+        <p class="section-intro">
+
+          A growing toolkit spanning application development, databases,
+
+          infrastructure, and troubleshooting.
+
+        </p>
+
+        <div class="skills-grid">
+
+          <article class="skill-card">
+
+            <div class="skill-icon">&lt;/&gt;</div>
+
+            <h3>Web Development</h3>
+
+            <p>Building dynamic web applications and working across the front end and back end.</p>
+
+            <div class="tags">
+
+              <span class="tag">PHP</span>
+
+              <span class="tag">JavaScript</span>
+
+              <span class="tag">HTML5</span>
+
+              <span class="tag">CSS3</span>
+
+            </div>
+
+          </article>
+
+          <article class="skill-card">
+
+            <div class="skill-icon">Py()</div>
+
+            <h3>Programming & Data</h3>
+
+            <p>Developing scripts, exploring data workflows, and learning new programming paradigms.</p>
+
+            <div class="tags">
+
+              <span class="tag">Python</span>
+
+              <span class="tag">C++</span>
+
+              <span class="tag">Pandas</span>
+
+            </div>
+
+          </article>
+
+          <article class="skill-card">
+
+            <div class="skill-icon">DB_</div>
+
+            <h3>Databases & APIs</h3>
+
+            <p>Working with relational databases and building applications that communicate through APIs.</p>
+
+            <div class="tags">
+
+              <span class="tag">MariaDB</span>
+
+              <span class="tag">SQL</span>
+
+              <span class="tag">REST APIs</span>
+
+            </div>
+
+          </article>
+
+          <article class="skill-card">
+
+            <div class="skill-icon">$_</div>
+
+            <h3>Linux & Infrastructure</h3>
+
+            <p>Configuring Linux environments, hosting services, and managing self-hosted applications.</p>
+
+            <div class="tags">
+
+              <span class="tag">Debian</span>
+
+              <span class="tag">Linux</span>
+
+              <span class="tag">SSH</span>
+
+              <span class="tag">Apache</span>
+
+              <span class="tag">Nginx</span>
+
+            </div>
+
+          </article>
+
+          <article class="skill-card">
+
+            <div class="skill-icon">↔</div>
+
+            <h3>Networking & Systems</h3>
+
+            <p>Hands-on experience configuring home networks, wireless access points, DNS, and IPv6.</p>
+
+            <div class="tags">
+
+              <span class="tag">TCP/IP</span>
+
+              <span class="tag">DNS</span>
+
+              <span class="tag">IPv6</span>
+
+              <span class="tag">UniFi</span>
+
+              <span class="tag">Raspberry Pi</span>
+
+            </div>
+
+          </article>
+
+          <article class="skill-card">
+
+            <div class="skill-icon">{ }</div>
+
+            <h3>Application Development</h3>
+
+            <p>Exploring mobile applications, game development, and software integrations.</p>
+
+            <div class="tags">
+
+              <span class="tag">Flask</span>
+
+              <span class="tag">Flutter</span>
+
+              <span class="tag">Godot</span>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Projects -->
+
+    <section class="section" id="projects">
+
+      <div class="container">
+
+        <p class="eyebrow">03 / Projects & Experiments</p>
+
+        <h2>Learning by building.</h2>
+
+        <p class="section-intro">
+
+          Personal projects and technical experiments exploring practical
+
+          software, self-hosting, and infrastructure.
+
+        </p>
+
+        <div class="projects-grid">
+
+          <article class="project-card">
+
+            <div class="project-number">PROJECT_01</div>
+
+            <h3>Self-Hosted Home Server</h3>
+
+            <p>
+
+              Building a personal server environment using Debian Linux,
+
+              with web hosting, reverse proxy configuration, and plans for
+
+              private cloud storage and media streaming.
+
+            </p>
+
+            <div class="tags">
+
+              <span class="tag">Debian</span>
+
+              <span class="tag">Nginx</span>
+
+              <span class="tag">Apache</span>
+
+              <span class="tag">Nextcloud</span>
+
+              <span class="tag">Jellyfin</span>
+
+            </div>
+
+          </article>
+
+          <article class="project-card">
+
+            <div class="project-number">PROJECT_02</div>
+
+            <h3>Home Networking Lab</h3>
+
+            <p>
+
+              Experimenting with network architecture, wireless access
+
+              points, DNS configuration, IPv6 addressing, and Raspberry Pi
+
+              networking to better understand how connected systems operate.
+
+            </p>
+
+            <div class="tags">
+
+              <span class="tag">UniFi</span>
+
+              <span class="tag">IPv6</span>
+
+              <span class="tag">DNS</span>
+
+              <span class="tag">Raspberry Pi</span>
+
+            </div>
+
+          </article>
+
+          <article class="project-card">
+
+            <div class="project-number">PROJECT_03</div>
+
+            <h3>Data & Automation Experiments</h3>
+
+            <p>
+
+              Exploring Python-based data processing, ETL workflows,
+
+              database integration, and opportunities to automate
+
+              repetitive tasks and solve business problems.
+
+            </p>
+
+            <div class="tags">
+
+              <span class="tag">Python</span>
+
+              <span class="tag">Pandas</span>
+
+              <span class="tag">MariaDB</span>
+
+              <span class="tag">Automation</span>
+
+            </div>
+
+          </article>
+
+          <article class="project-card">
+
+            <div class="project-number">PROJECT_04</div>
+
+            <h3>Game & Application Prototypes</h3>
+
+            <p>
+
+              Exploring game mechanics, player-driven systems, and
+
+              application development through programming experiments
+
+              and early-stage project concepts.
+
+            </p>
+
+            <div class="tags">
+
+              <span class="tag">C++</span>
+
+              <span class="tag">Godot</span>
+
+              <span class="tag">Python</span>
+
+              <span class="tag">Game Design</span>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Continuing Education -->
+
+    <section class="section" id="learning">
+
+      <div class="container">
+
+        <p class="eyebrow">04 / Continuous Learning</p>
+
+        <h2>Always expanding.</h2>
+
+        <div class="learning-box">
+
+          <p>
+
+            I believe technical growth comes from consistent practice,
+
+            curiosity, and a willingness to explore unfamiliar territory.
+
+            I'm continuing to strengthen my programming foundation while
+
+            developing practical skills in IT support, systems administration,
+
+            and infrastructure.
+
+          </p>
+
+          <div class="learning-tags">
+
+            <span>Python & C++</span>
+
+            <span>Linux Administration</span>
+
+            <span>IT Support</span>
+
+            <span>Networking</span>
+
+            <span>Data Processing</span>
+
+            <span>Application Development</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Languages -->
+
+    <section class="section" id="languages">
+
+      <div class="container">
+
+        <p class="eyebrow">05 / Languages</p>
+
+        <h2>Code is one language.<br>People are another.</h2>
+
+        <p class="section-intro">
+
+          Communicating across languages helps me connect with people,
+
+          approach problems from different perspectives, and keep learning.
+
+        </p>
+
+        <div class="languages-grid">
+
+          <article class="language-card">
+
+            <h3>English</h3>
+
+            <p>Fluent · Professional communication</p>
+
+            <span class="language-level">Fluent</span>
+
+          </article>
+
+          <article class="language-card">
+
+            <h3>Español</h3>
+
+            <p>Fluent · Native-level conversational ability</p>
+
+            <span class="language-level">Fluent</span>
+
+          </article>
+
+          <article class="language-card">
+
+            <h3>Português</h3>
+
+            <p>Intermediate · Continuing to develop fluency</p>
+
+            <span class="language-level">Intermediate</span>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Contact -->
+
+    <section class="section" id="contact">
+
+      <div class="container">
+
+        <div class="contact-box">
+
+          <p class="eyebrow">06 / Contact</p>
+
+          <h2>Let's build something.</h2>
+
+          <p>
+
+            Interested in working together, discussing a project,
+
+            or connecting about a technology opportunity?
+
+            I'd love to hear from you.
+
+          </p>
+
+          <div class="contact-links">
+
+
+
+            <a class="btn btn-primary"
+
+               href="mailto:your.eddiecorredor@hotmail.com">
+
+              Email Me ↗
+
+            </a>
+
+
+            <a class="btn btn-secondary"
+
+               href="https://github.com/eddiecorredor"
+
+               target="_blank"
+
+               rel="noopener noreferrer">
+
+              GitHub ↗
+
+            </a>
+
+
+            <a class="btn btn-secondary"
+
+               href="linkedin.com/in/eddie-corredor-6934643a9"
+
+               target="_blank"
+
+               rel="noopener noreferrer">
+
+              LinkedIn ↗
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <div class="container">
+
+      <p>© <span id="year"></span> Eddie Corredor · Built with curiosity and code.</p>
+
+    </div>
+
+  </footer>
+
+  <script>
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+  </script>
+
+</body>
+
 </html>
